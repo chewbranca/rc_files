@@ -1,4 +1,10 @@
-This is my collection of rc files.
+This is my collection of rc files. This is a random collection of
+functions, aliases and settings I've stumbled upon. I searched 
+through a lot of the old dotfiles.org site cherry picky configs
+that I like.
+
+I would also like to incorporate settings from:
+http://tldp.org/LDP/abs/html/sample-bashrc.html
 
 So far I have added in my work in progress bash config.
 
