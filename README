@@ -1,0 +1,14 @@
+This is my collection of rc files.
+
+So far I have added in my work in progress bash config.
+
+I recommend just cloning this to your home directory and then
+symlinking everything in.
+
+From the initial commit:
+
+    This is still pretty ugly and needs some work, but it has a hand-
+    ful of nice aliases and functions. The prompt still needs work.
+    I like seeing jobs and the git repo in the prompt, but it needs
+    to be cleaned up and has a lot of room for improvement.
+
