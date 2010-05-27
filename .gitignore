@@ -1,0 +1,8 @@
+!*.gitignore
+tmp
+.DS_Store
+*.log
+*.bak
+.*.swp
+.*.swo
+*.pid
