@@ -40,6 +40,9 @@ alias myip2="curl www.whatismyip.org"
 alias ns="netstat -alnp --protocol=inet | grep -v CLOSE_WAIT | cut -c-6,21-94 | tail -n +2"
 alias ns2="sudo watch -n 3 -d -t netstat -vantp"
 alias path='echo -e ${PATH//:/\\n}'
+# create OSX's pbcopy
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste='xclip -selection clipboard -o'
 
 # --------------
 #   Shortcuts
