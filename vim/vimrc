@@ -1,0 +1,81 @@
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+" turn off compatibility with the old vi
+set nocompatible
+
+" set our tabs to four spaces
+set tabstop=4
+set shiftwidth=4
+" TODO::
+" set softtabstop=4
+set expandtab
+
+" turn syntax highlighting on by default
+syntax on
+
+" turn on last search highlighting
+set hlsearch
+
+" set auto-indenting on for programming
+set ai
+set si
+
+" automatically show matching brackets. works like it does in bbedit.
+set showmatch
+
+" make that backspace key work the way it should
+set backspace=indent,eol,start
+
+" do NOT put a carriage return at the end of the last line! if you are programming
+" for the web the default will cause http headers to be sent. that's bad.
+set binary noeol
+
+" Turn off annoying bells
+set novisualbell
+set noerrorbells
+
+if has("autocmd")
+    filetype plugin indent on
+endif
+
+command! Status echo "asdf"
+
+" Colors
+set t_Co=256
+" colors inkpot
+
+" Status
+" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+" set laststatus=2
+
+" Custom Commands
+map <Leader>c :!couchapp push<CR><Esc>
+
+"
+" Filetype Configs
+"
+
+" Turn on syntax highlighting for nginx conf files
+au BufRead,BufNewFile /etc/nginx/conf/* set ft=nginx 
+au BufRead,BufNewFile /etc/nginx/sites-available/* set ft=nginx 
+
+" TODO:: switch these to leader commands
+" run file with PHP CLI (CTRL-M)
+"autocmd FileType php noremap <C-M> :w!<CR>:!/usr/bin/php %<CR>
+"autocmd FileType ruby noremap <C-M> :w!<CR>:!/usr/bin/ruby %<CR>
+" PHP parser check (CTRL-L)
+"autocmd FileType php noremap <C-L> :w!<CR>:!/usr/bin/php -l %<CR>
+"autocmd FileType ruby noremap <C-L> :w!<CR>:!/usr/bin/ruby -c %<CR>
+
+" TODO:: set softabstop
+autocmd FileType ruby set tabstop=2|set shiftwidth=2|set ai| set ci
+autocmd FileType Gemfile set tabstop=2|set shiftwidth=2|set ai| set ci
+autocmd FileType cucumber set tabstop=2|set shiftwidth=2|set ai| set ci
+autocmd FileType haskell set tabstop=4|set shiftwidth=4|set ai| set ci| set expandtab
+
+" Clojure
+" let vimclojure#WantNailgun = 1
+
+" Erlang
+let g:erlangHighlightBif = 1
