@@ -37,3 +37,12 @@
 [submodule "vim/bundle/color-sampler-pack"]
 	path = vim/bundle/color-sampler-pack
 	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
+[submodule "misc/gitignore"]
+	path = misc/gitignore
+	url = https://github.com/github/gitignore.git
+[submodule "vim/bundle/command-t"]
+	path = vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "vim/bundle/taglist"]
+	path = vim/bundle/taglist
+	url = https://github.com/chrismetcalf/vim-taglist.git

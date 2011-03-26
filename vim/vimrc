@@ -14,8 +14,12 @@ set expandtab
 " turn syntax highlighting on by default
 syntax on
 
-" turn on last search highlighting
-set hlsearch
+" Search
+
+set hlsearch " turn on last search highlighting
+set incsearch " find immediate results
+set ignorecase " ignore case in search
+set smartcase " unless you add case
 
 " set auto-indenting on for programming
 set ai
@@ -41,13 +45,41 @@ endif
 
 command! Status echo "asdf"
 
+"
+" Misc
+"
+set ruler
+set history=1000
+set wildmenu
+set wildignore=*.o,*.obj,*~,*.beam,*.log,*.sql,vendor/**,.git/**
+set showcmd " show me what I'm typing
+set title
+" whitespace
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+" window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+"let mapleader = ","
+
+
 " Colors
 set t_Co=256
 " colors inkpot
 
 " Status
 " set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
-" set laststatus=2
+set statusline=%f
+set statusline+=[%{fugitive#statusline()}]
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=\ %P    "percent through file
+
+set laststatus=2
+
 
 " Custom Commands
 map <Leader>c :!couchapp push<CR><Esc>
@@ -79,3 +111,8 @@ autocmd FileType haskell set tabstop=4|set shiftwidth=4|set ai| set ci| set expa
 
 " Erlang
 let g:erlangHighlightBif = 1
+
+" Misc bindings
+map <leader>p :NERDTreeToggle<cr>
+map <leader>tl :TlistToggle <cr>
+let Tlist_Use_Right_Window = 1
