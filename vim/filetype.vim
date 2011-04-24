@@ -6,4 +6,5 @@ augroup filetypedetect
   "au! BufRead,BufNewFile *.mine		setfiletype mine
   "au! BufRead,BufNewFile *.xyz		setfiletype drawing
   au! BufNewFile,BufRead .tmux.conf*,tmux.conf* setfiletype tmux
+  au! BufNewFile,BufRead *.clj setfiletype clojure
 augroup END
