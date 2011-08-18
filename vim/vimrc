@@ -112,10 +112,6 @@ autocmd FileType Gemfile set tabstop=2|set shiftwidth=2|set ai| set ci
 autocmd FileType cucumber set tabstop=2|set shiftwidth=2|set ai| set ci
 autocmd FileType haskell set tabstop=4|set shiftwidth=4|set ai| set ci| set expandtab
 
-" Clojure
-let vimclojure#WantNailgun = 1
-let g:vimclojure#ParenRainbow = 1
-
 " Erlang
 let g:erlangHighlightBif = 1
 
@@ -126,3 +122,8 @@ let Tlist_Use_Right_Window = 1
 
 let g:solarized_termcolors = 256
 let g:solarized_style = "dark"
+
+" Slimv settings
+let g:slimv_swank_clojure = '! xterm -e lein swank &'
+let g:lisp_rainbow = 1
+let g:slimv_repl_syntax = 1
