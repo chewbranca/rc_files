@@ -48,8 +48,6 @@ if has("autocmd")
     filetype plugin indent on
 endif
 
-command! Status echo "asdf"
-
 "
 " Misc
 "
@@ -88,6 +86,7 @@ set laststatus=2
 
 " Custom Commands
 map <Leader>c :!couchapp push<CR><Esc>
+map <Leader>e :!erica push<CR><Esc>
 
 "
 " Filetype Configs
