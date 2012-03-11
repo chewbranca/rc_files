@@ -34,6 +34,9 @@
 
 
 
+(add-to-list 'load-path "~/.emacs.d/distel/elisp")
+(require 'distel)
+(distel-setup)
 
 
 
@@ -42,7 +45,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("5600dc0bb4a2b72a613175da54edb4ad770105aa" "0174d99a8f1fdc506fa54403317072982656f127" "9cdf9fb94f560902b567b73f65c2ed4e5cfbaafe" default))))
+ '(custom-safe-themes (quote ("aa1610894e3435eabcb008a7b782fbd83d1a3082" "5600dc0bb4a2b72a613175da54edb4ad770105aa" "0174d99a8f1fdc506fa54403317072982656f127" "9cdf9fb94f560902b567b73f65c2ed4e5cfbaafe" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
