@@ -71,16 +71,24 @@ the mode-line."
 
 
 (setq load-path (cons "/usr/local/share/emacs/site-lisp" load-path))
-(require 'notmuch)
+;;(require 'notmuch)
 ;;(setq mail-header-separator "")
-(add-hook 'message-mode-hook 'auto-fill-mode)
-(setq notmuch-folders '(("inbox" . "tag:inbox")
-						("to-me" . "tag:to-me")
-						("todo" . "tag:todo")
-						("unread" . "tag:unread")))
+;;(add-hook 'message-mode-hook 'auto-fill-mode)
+;;(setq notmuch-folders '(("inbox" . "tag:inbox")
+;;						("to-me" . "tag:to-me")
+;;						("todo" . "tag:todo")
+;;						("unread" . "tag:unread")))
 
 
 (global-set-key (kbd "<C-S-up>")     'buf-move-up)
 (global-set-key (kbd "<C-S-down>")   'buf-move-down)
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
+
+;; Rect mode
+(require 'rect-mark)
+(global-set-key (kbd "C-x r C-SPC") 'rm-set-mark)
+(global-set-key (kbd "C-x r C-x")   'rm-exchange-point-and-mark)
+(global-set-key (kbd "C-x r C-w")   'rm-kill-region)
+(global-set-key (kbd "C-x r M-w")   'rm-kill-ring-save)
+(global-set-key (kbd "C-x r <down-mouse-1>") 'rm-mouse-drag-region)

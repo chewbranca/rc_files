@@ -9,8 +9,9 @@
 (defvar my-packages 
   '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-eshell
                 starter-kit-ruby starter-kit-js clojure-mode clojure-test-mode clojurescript-mode
-                markdown-mode yaml-mode magit erc-hl-nicks flymake-haml haml-mode highline
-                buffer-move erc-hl-nicks yaml-mode window-number)
+                markdown-mode yaml-mode magit erc-hl-nicks flymake flymake-haml haml-mode highline
+                buffer-move erc-hl-nicks yaml-mode window-number ipython nginx-mode
+                ghc ghci-completion haskell-mode rect-mark)
   ;; disabled rinari due to https://github.com/nonsequitur/inf-ruby/issues/1
   "A list of packages to ensure are installed at launch.")
 
@@ -28,8 +29,8 @@
 
 ;;(require 'inf-ruby)
 
-(add-to-list 'load-path "~/.emacs.d/rinari")
-(require 'rinari)
+;;(add-to-list 'load-path "~/.emacs.d/rinari")
+;;(require 'rinari)
 
 
 
