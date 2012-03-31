@@ -1,0 +1,10 @@
+alias e find-file $1
+alias gst git status
+alias psgrep ps auxww | grep $*
+alias ll ls -l
+alias emacs find-file $1
+alias vim find-file $1
+alias dlll ls -l
+alias ddd ls -l
+alias sl ls $1
+alias cpush couchapp push
